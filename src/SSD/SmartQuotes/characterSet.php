@@ -1,5 +1,7 @@
 <?php
 
+# inspired by http://stackoverflow.com/questions/20025030/convert-all-types-of-smart-quotes-with-php
+
 return [
 
     // Windows codepage 1252

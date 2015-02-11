@@ -20,5 +20,8 @@ echo SmartQuotesFactory::filter(new Utf8CharacterSet, $string);
 // ASCII implementation
 echo SmartQuotesFactory::filter(new AsciiCharacterSet, $string);
 
-// both return It's important to choose the right 'subject line' and define the cost in GBP (£)
+// both return:
+// "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+// 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.'
+// It's important to choose the right 'subject line' and define the cost in GBP (£)
 ```

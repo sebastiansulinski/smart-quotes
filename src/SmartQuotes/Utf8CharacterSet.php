@@ -15,7 +15,7 @@ class Utf8CharacterSet extends SmartQuotes implements Contract {
     private function getCharacterSet()
     {
 
-        $this->data = require("characterSet.php");
+        $this->data = require("utfMap.php");
 
     }
 

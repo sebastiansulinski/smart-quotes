@@ -3,6 +3,14 @@
 
 abstract class SmartQuotes {
 
+    /**
+     * @var array
+     */
+    protected $data = [];
+
+
+
+
 
     /**
      * @param mixed $string
@@ -19,4 +27,42 @@ abstract class SmartQuotes {
         }
 
     }
+
+    /**
+     * @return array
+     */
+    protected function getKeys()
+    {
+
+        return array_keys($this->data);
+
+    }
+
+    /**
+     * @return array
+     */
+    protected function getValues()
+    {
+
+        return array_values($this->data);
+
+    }
+
+    /**
+     * @return void
+     */
+    abstract protected function getCharacterSet();
+
+    /**
+     * @param mixed $string
+     */
+    protected function setUp(&$string)
+    {
+
+        $this->convertToUtf8($string);
+
+        $this->getCharacterSet();
+        
+    }
+
 }

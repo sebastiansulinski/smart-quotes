@@ -4,7 +4,7 @@
 class Factory {
 
     /**
-     * @param SmartQuotesInterface $smartQuotes
+     * @param Contract $smartQuotes
      * @param mixed $string
      *
      * @return mixed|null

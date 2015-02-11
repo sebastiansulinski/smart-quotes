@@ -3,41 +3,14 @@
 
 class Utf8CharacterSet extends SmartQuotes implements Contract {
 
-    /**
-     * @var array
-     */
-    private $data = [];
-
 
     /**
      * @return void
      */
-    private function getCharacterSet()
+    protected function getCharacterSet()
     {
 
-        $this->data = require("utfMap.php");
-
-    }
-
-
-    /**
-     * @return array
-     */
-    private function getKeys()
-    {
-
-        return array_keys($this->data);
-
-    }
-
-
-    /**
-     * @return array
-     */
-    private function getValues()
-    {
-
-        return array_values($this->data);
+        $this->data = require("utf8Map.php");
 
     }
 
@@ -50,9 +23,7 @@ class Utf8CharacterSet extends SmartQuotes implements Contract {
     public function purify($string)
     {
 
-        $this->convertToUtf8($string);
-
-        $this->getCharacterSet();
+        $this->setUp($string);
 
         return str_replace(
             $this->getKeys(),

@@ -25,7 +25,7 @@ abstract class SmartQuotes {
 
         if (!is_string($string)) {
 
-            throw new InvalidArgumentException;
+            throw new InvalidArgumentException('Method only accepts string argument.');
 
         }
 

@@ -23,7 +23,7 @@ abstract class SmartQuotes {
     protected function convertToUtf8(&$string)
     {
 
-        if (!is_string($string)) {
+        if (is_array($string)) {
 
             throw new InvalidArgumentException('Method only accepts string argument.');
 

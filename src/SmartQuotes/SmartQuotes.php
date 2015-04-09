@@ -1,6 +1,8 @@
 <?php namespace SSD\SmartQuotes;
 
 
+use InvalidArgumentException;
+
 abstract class SmartQuotes {
 
     /**
@@ -16,9 +18,16 @@ abstract class SmartQuotes {
      * @param mixed $string
      *
      * @return void
+     * @throws InvalidArgumentException
      */
     protected function convertToUtf8(&$string)
     {
+
+        if (!is_string($string)) {
+
+            throw new InvalidArgumentException;
+
+        }
 
         if (!preg_match('/^\\X*$/u', $string)) {
 

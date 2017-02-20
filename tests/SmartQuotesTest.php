@@ -9,15 +9,23 @@ use SSD\SmartQuotes\AsciiCharacterSet;
 class SmartQuotesTest extends TestCase
 {
     /**
+     * @var string
+     */
+    private $input = "“Contrary to ‘popular belief’, Lorem Ipsum is not simply ‘random text’. The cost in Sterling is £20.00”";
+
+    /**
+     * @var string
+     */
+    private $output = "\"Contrary to 'popular belief', Lorem Ipsum is not simply 'random text'. The cost in Sterling is £20.00\"";
+
+    /**
      * @test
      */
     public function correctly_returns_string_with_converted_apostrophes_using_utf8_character_set()
     {
-        $string = "“Contrary to ‘popular belief’, Lorem Ipsum is not simply ‘random text’. The cost in Sterling is £20.00”";
-
         $this->assertEquals(
-            "\"Contrary to 'popular belief', Lorem Ipsum is not simply 'random text'. The cost in Sterling is £20.00\"",
-            Factory::filter(new Utf8CharacterSet, $string)
+            $this->output,
+            Factory::filter(new Utf8CharacterSet, $this->input)
         );
     }
 
@@ -26,11 +34,9 @@ class SmartQuotesTest extends TestCase
      */
     public function correctly_returns_string_with_converted_apostrophes_using_ascii_character_set()
     {
-        $string = "“Contrary to ‘popular belief’, Lorem Ipsum is not simply ‘random text’. The cost in Sterling is £20.00”";
-
         $this->assertEquals(
-            "\"Contrary to 'popular belief', Lorem Ipsum is not simply 'random text'. The cost in Sterling is £20.00\"",
-            Factory::filter(new AsciiCharacterSet, $string)
+            $this->output,
+            Factory::filter(new AsciiCharacterSet, $this->input)
         );
     }
 }

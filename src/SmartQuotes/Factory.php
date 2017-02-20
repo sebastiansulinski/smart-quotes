@@ -1,19 +1,18 @@
-<?php namespace SSD\SmartQuotes;
+<?php
 
+namespace SSD\SmartQuotes;
 
-class Factory {
-
+class Factory
+{
     /**
-     * @param Contract $smartQuotes
-     * @param mixed $string
+     * Filter string using given implementation.
      *
-     * @return mixed|null
+     * @param SmartQuotes $quotes
+     * @param string $string
+     * @return string
      */
-    public static function filter(Contract $smartQuotes, $string)
+    public static function filter(SmartQuotes $quotes, string $string)
     {
-
-        return $smartQuotes->purify($string);
-
+        return $quotes->purify($string);
     }
-
 }

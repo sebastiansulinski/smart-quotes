@@ -1,27 +1,27 @@
-<?php namespace SSD\SmartQuotes;
+<?php
 
+namespace SSD\SmartQuotes;
 
-class AsciiCharacterSet extends SmartQuotes implements Contract {
-
-
+class AsciiCharacterSet extends SmartQuotes
+{
     /**
+     * Fetch character-set map.
+     *
      * @return void
      */
-    protected function getCharacterSet()
+    protected function fetchCharacterSet()
     {
-
-        $this->data = require("asciiMap.php");
-
+        $this->data = require "maps/ascii.php";
     }
 
     /**
-     * @param mixed $string
+     * Purify input.
      *
-     * @return mixed
+     * @param string $string
+     * @return string
      */
-    public function purify($string)
+    public function purify(string $string)
     {
-
         $this->setUp($string);
 
         $keys = $this->getKeys();
@@ -32,8 +32,5 @@ class AsciiCharacterSet extends SmartQuotes implements Contract {
         $string = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
 
         return $string = str_replace($values, $keys, $string);
-
     }
-
-
 }

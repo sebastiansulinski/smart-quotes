@@ -4,6 +4,5 @@
 # and which aren't part of the ascii character set
 
 return [
-
     "£" => "||$||"
 ];

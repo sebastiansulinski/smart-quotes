@@ -1,28 +1,27 @@
-<?php namespace SSD\SmartQuotes;
+<?php
 
+namespace SSD\SmartQuotes;
 
-class Utf8CharacterSet extends SmartQuotes implements Contract {
-
-
+class Utf8CharacterSet extends SmartQuotes
+{
     /**
+     * Fetch character-set map.
+     *
      * @return void
      */
-    protected function getCharacterSet()
+    protected function fetchCharacterSet()
     {
-
-        $this->data = require("utf8Map.php");
-
+        $this->data = require "maps/utf8.php";
     }
 
-
     /**
-     * @param null $string
+     * Purify input.
      *
-     * @return mixed|null
+     * @param string $string
+     * @return string
      */
-    public function purify($string)
+    public function purify(string $string)
     {
-
         $this->setUp($string);
 
         return str_replace(
@@ -30,7 +29,5 @@ class Utf8CharacterSet extends SmartQuotes implements Contract {
             $this->getValues(),
             html_entity_decode($string, ENT_QUOTES, "UTF-8")
         );
-
     }
-
 }

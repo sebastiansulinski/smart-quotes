@@ -28,5 +28,6 @@ return [
     "\xE2\x80\x9F" => '"', // U+201F double high-reversed-9 quotation mark
     "\xE2\x80\xB9" => "'", // U+2039 single left-pointing angle quotation mark
     "\xE2\x80\xBA" => "'", // U+203A single right-pointing angle quotation mark
+    "\xE2\x80\xB2" => "'", // U+2032 prime
 
 ];

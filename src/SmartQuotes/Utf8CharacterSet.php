@@ -17,7 +17,7 @@ class Utf8CharacterSet extends SmartQuotes
     /**
      * Purify input.
      *
-     * @param string $string
+     * @param  string  $string
      * @return string
      */
     public function purify(string $string)

@@ -17,7 +17,7 @@ class AsciiCharacterSet extends SmartQuotes
     /**
      * Purify input.
      *
-     * @param string $string
+     * @param  string  $string
      * @return string
      */
     public function purify(string $string)
@@ -27,10 +27,10 @@ class AsciiCharacterSet extends SmartQuotes
         $keys = $this->getKeys();
         $values = $this->getValues();
 
-        $string = str_replace($keys, $values, $string);
+        $string = str_replace($keys, $values, Factory::filter(new Utf8CharacterSet, $string));
 
         $string = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
 
-        return $string = str_replace($values, $keys, $string);
+        return str_replace($values, $keys, $string);
     }
 }

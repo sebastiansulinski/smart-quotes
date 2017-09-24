@@ -1,6 +1,7 @@
 <?php
 
 # inspired by http://stackoverflow.com/questions/20025030/convert-all-types-of-smart-quotes-with-php
+# Appendix F. ASCII Table http://lwp.interglacial.com/appf_01.htm
 
 return [
 

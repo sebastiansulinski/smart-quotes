@@ -11,12 +11,12 @@ class SmartQuotesTest extends TestCase
     /**
      * @var string
      */
-    private $input = "“Contrary to ‘popular belief’, Lorem Ipsum is not simply ‘random text’. The cost in Sterling is £20.00”";
+    private $input = "“Contrary to ‘popular belief’, Lorem Ipsum„ is not simply ‘random text’. The cost″ in Sterling′ is £20.00”";
 
     /**
      * @var string
      */
-    private $output = "\"Contrary to 'popular belief', Lorem Ipsum is not simply 'random text'. The cost in Sterling is £20.00\"";
+    private $output = "\"Contrary to 'popular belief', Lorem Ipsum\" is not simply 'random text'. The cost\" in Sterling' is £20.00\"";
 
     /**
      * @test

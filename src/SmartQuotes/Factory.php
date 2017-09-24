@@ -7,8 +7,8 @@ class Factory
     /**
      * Filter string using given implementation.
      *
-     * @param SmartQuotes $quotes
-     * @param string $string
+     * @param  \SSD\SmartQuotes\SmartQuotes  $quotes
+     * @param  string  $string
      * @return string
      */
     public static function filter(SmartQuotes $quotes, string $string)

@@ -14,7 +14,7 @@ abstract class SmartQuotes
     /**
      * Convert input to utf-8.
      *
-     * @param string $string
+     * @param  string  $string
      * @return void
      */
     protected function convertToUtf8(string &$string)
@@ -54,7 +54,7 @@ abstract class SmartQuotes
     /**
      * Purify input.
      *
-     * @param string $string
+     * @param  string  $string
      * @return string
      */
     abstract public function purify(string $string);
@@ -62,7 +62,7 @@ abstract class SmartQuotes
     /**
      * Set up component.
      *
-     * @param string $string
+     * @param string  $string
      */
     protected function setUp(string &$string)
     {

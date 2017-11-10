@@ -6,7 +6,7 @@ The kit replaces all irregular - Microsoft version single and double quotes to s
 
 ## Requirements
 
-Starting from version 1.1.0 it requires PHP 7 or higher. For earlier releases of PHP please use version 1.0.5.
+Starting from version 1.2.0 package requires PHP 7.1 or higher. Version 1.1.0 requires PHP 7.0. For earlier releases of PHP please use version 1.0.5.
 
 ## Usage example
 

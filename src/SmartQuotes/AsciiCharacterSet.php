@@ -9,7 +9,7 @@ class AsciiCharacterSet extends SmartQuotes
      *
      * @return void
      */
-    protected function fetchCharacterSet()
+    protected function fetchCharacterSet(): void
     {
         $this->data = require "maps/ascii.php";
     }
@@ -20,7 +20,7 @@ class AsciiCharacterSet extends SmartQuotes
      * @param  string  $string
      * @return string
      */
-    public function purify(string $string)
+    public function purify(string $string): string
     {
         $this->setUp($string);
 

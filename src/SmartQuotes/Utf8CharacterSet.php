@@ -9,7 +9,7 @@ class Utf8CharacterSet extends SmartQuotes
      *
      * @return void
      */
-    protected function fetchCharacterSet()
+    protected function fetchCharacterSet(): void
     {
         $this->data = require "maps/utf8.php";
     }
@@ -20,7 +20,7 @@ class Utf8CharacterSet extends SmartQuotes
      * @param  string  $string
      * @return string
      */
-    public function purify(string $string)
+    public function purify(string $string): string
     {
         $this->setUp($string);
 

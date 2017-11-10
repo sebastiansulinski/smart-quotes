@@ -1,5 +1,7 @@
 <?php
 
+namespace SSDTest;
+
 use PHPUnit\Framework\TestCase;
 
 use SSD\SmartQuotes\Factory;

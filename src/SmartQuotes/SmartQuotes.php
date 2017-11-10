@@ -17,7 +17,7 @@ abstract class SmartQuotes
      * @param  string  $string
      * @return void
      */
-    protected function convertToUtf8(string &$string)
+    protected function convertToUtf8(string &$string): void
     {
         if (!preg_match('/^\\X*$/u', $string)) {
             $string = utf8_encode($string);
@@ -29,7 +29,7 @@ abstract class SmartQuotes
      *
      * @return array
      */
-    protected function getKeys()
+    protected function getKeys(): array
     {
         return array_keys($this->data);
     }
@@ -39,7 +39,7 @@ abstract class SmartQuotes
      *
      * @return array
      */
-    protected function getValues()
+    protected function getValues(): array
     {
         return array_values($this->data);
     }
@@ -49,7 +49,7 @@ abstract class SmartQuotes
      *
      * @return void
      */
-    abstract protected function fetchCharacterSet();
+    abstract protected function fetchCharacterSet(): void;
 
     /**
      * Purify input.
@@ -57,14 +57,15 @@ abstract class SmartQuotes
      * @param  string  $string
      * @return string
      */
-    abstract public function purify(string $string);
+    abstract public function purify(string $string): string;
 
     /**
      * Set up component.
      *
-     * @param string  $string
+     * @param  string  $string
+     * @return void
      */
-    protected function setUp(string &$string)
+    protected function setUp(string &$string): void
     {
         $this->convertToUtf8($string);
         $this->fetchCharacterSet();

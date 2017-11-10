@@ -11,7 +11,7 @@ class Factory
      * @param  string  $string
      * @return string
      */
-    public static function filter(SmartQuotes $quotes, string $string)
+    public static function filter(SmartQuotes $quotes, string $string): string
     {
         return $quotes->purify($string);
     }

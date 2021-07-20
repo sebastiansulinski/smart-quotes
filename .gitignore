@@ -2,3 +2,5 @@
 .DS_Store
 /vendor/
 index.php
+.phpunit.result.cache
+composer.lock

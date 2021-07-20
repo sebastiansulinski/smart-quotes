@@ -4,12 +4,7 @@ namespace SSD\SmartQuotes;
 
 abstract class SmartQuotes
 {
-    /**
-     * Map.
-     *
-     * @var array
-     */
-    protected $data = [];
+    protected array $data = [];
 
     /**
      * Convert input to utf-8.

@@ -2,8 +2,6 @@
 
 The kit replaces all irregular - Microsoft version single and double quotes to simple - ASCII type ones.
 
-[![Build Status](https://travis-ci.org/sebastiansulinski/smart-quotes.svg?branch=master)](https://travis-ci.org/sebastiansulinski/smart-quotes)
-
 ## Requirements
 
 Starting from version 1.3.0 package requires PHP 7.1 or higher. Please use version 1.2.0 for PHP 7.0 or 1.0.5 for earlier versions.

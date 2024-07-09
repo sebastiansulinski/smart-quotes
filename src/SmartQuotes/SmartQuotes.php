@@ -15,7 +15,7 @@ abstract class SmartQuotes
     protected function convertToUtf8(string &$string): void
     {
         if (!preg_match('/^\\X*$/u', $string)) {
-            $string = utf8_encode($string);
+            $string = mb_convert_encoding($string, 'UTF-8', mb_list_encodings());
         }
     }
 

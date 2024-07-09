@@ -2,6 +2,7 @@
 
 namespace SSDTest;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 use SSD\SmartQuotes\Factory;
@@ -20,9 +21,7 @@ class SmartQuotesTest extends TestCase
      */
     private $output = "\"Contrary to 'popular belief', Lorem Ipsum\" is not simply 'random text'. The cost\" in Sterling' is £20.00\"";
 
-    /**
-     * @test
-     */
+    #[Test]
     public function correctly_returns_string_with_converted_apostrophes_using_utf8_character_set()
     {
         $this->assertEquals(
@@ -31,9 +30,7 @@ class SmartQuotesTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function correctly_returns_string_with_converted_apostrophes_using_ascii_character_set()
     {
         $this->assertEquals(
